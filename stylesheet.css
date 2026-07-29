@@ -1,0 +1,247 @@
+/* =========================
+   GENERAL SETTINGS
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+
+
+/* =========================
+   NAVIGATION BAR
+   ========================= */
+
+.navbar {
+    height: 68px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 30px;
+
+    background-color: white;
+
+    border-bottom: 2px solid #555;
+}
+
+
+
+/* =========================
+   LOGO IMAGE
+   ========================= */
+
+.logo {
+    width: 180px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.logo img {
+    width: 125px;
+    height: auto;
+
+    display: block;
+}
+
+
+
+/* =========================
+   SEARCH BAR
+   ========================= */
+
+.search-container {
+    position: relative;
+
+    width: 335px;
+    height: 34px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.search-container input {
+    width: 100%;
+    height: 100%;
+
+    padding: 0 35px 0 12px;
+
+    border: 1px solid #aaa;
+    border-radius: 20px;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+
+.search-container input:focus {
+    border-color: #555;
+}
+
+
+.clear-button {
+    position: absolute;
+
+    right: 10px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+    background: none;
+
+    color: #555;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+
+/* =========================
+   RIGHT SIDE
+   ========================= */
+
+.nav-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    width: 180px;
+
+    justify-content: flex-end;
+}
+
+
+
+/* =========================
+   LOGIN BUTTON
+   ========================= */
+
+.login-button {
+    height: 40px;
+
+    padding: 0 18px;
+
+    border: none;
+    border-radius: 20px;
+
+    background-color: #0757b5;
+    color: white;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+.login-button:hover {
+    background-color: #064a99;
+}
+
+
+
+/* =========================
+   HAMBURGER MENU
+   ========================= */
+
+.menu-container {
+    position: relative;
+}
+
+
+.menu-button {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+.menu-button span {
+    display: block;
+
+    width: 29px;
+    height: 2px;
+
+    background-color: #777;
+}
+
+
+
+/* =========================
+   DROPDOWN MENU
+   ========================= */
+
+.menu {
+    position: absolute;
+
+    top: 45px;
+    right: 0;
+
+    width: 180px;
+
+    display: none;
+
+    flex-direction: column;
+
+    background-color: white;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+
+    z-index: 100;
+}
+
+
+.menu a {
+    padding: 14px 18px;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+.menu a:hover {
+    background-color: #eeeeee;
+}
+
+
+.menu.menu-open {
+    display: flex;
+}
