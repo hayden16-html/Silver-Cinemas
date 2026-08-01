@@ -1,19 +1,27 @@
-const movieCarousel = document.querySelector(".now-showing-carousel");
+const wrappers = document.querySelectorAll(".carousel-wrapper");
 
-document.querySelector(".carousel-right").addEventListener("click", () => {
+wrappers.forEach(wrapper => {
 
-    movieCarousel.scrollBy({
-        left: 240,
-        behavior: "smooth"
+    const carousel = wrapper.querySelector(".now-showing-carousel");
+    const leftButton = wrapper.querySelector(".carousel-left");
+    const rightButton = wrapper.querySelector(".carousel-right");
+
+    rightButton.addEventListener("click", () => {
+
+        carousel.scrollBy({
+            left: 260,
+            behavior: "smooth"
+        });
+
     });
 
-});
+    leftButton.addEventListener("click", () => {
 
-document.querySelector(".carousel-left").addEventListener("click", () => {
+        carousel.scrollBy({
+            left: -260,
+            behavior: "smooth"
+        });
 
-    movieCarousel.scrollBy({
-        left: -240,
-        behavior: "smooth"
     });
 
 });
