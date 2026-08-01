@@ -1,5 +1,15 @@
 /* GENERAL SETTINGS*/
 
+@font-face {
+    font-family: "Modern Romance";
+    src: url("./fonts/Modern\ Romance.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Modern Romance:", serif;
+}
 * {
     margin: 0;
     padding: 0;
@@ -19,14 +29,10 @@ body {
 .navbar {
     height: 68px;
     width: 100%;
-
     display: flex;
     align-items: center;
-
     padding: 0 30px;
-
     background-color: white;
-
     border-bottom: 2px solid #555;
 }
 
@@ -36,7 +42,6 @@ body {
 
 .logo {
     width: 180px;
-
     display: flex;
     align-items: center;
 }
@@ -45,7 +50,6 @@ body {
 .logo img {
     width: 125px;
     height: auto;
-
     display: block;
 }
 
@@ -55,10 +59,8 @@ body {
 
 .search-container {
     position: relative;
-
     width: 335px;
     height: 34px;
-
     margin-left: auto;
     margin-right: auto;
 }
@@ -67,14 +69,10 @@ body {
 .search-container input {
     width: 100%;
     height: 100%;
-
     padding: 0 35px 0 12px;
-
     border: 1px solid #aaa;
     border-radius: 20px;
-
     outline: none;
-
     font-size: 12px;
 }
 
@@ -86,19 +84,13 @@ body {
 
 .clear-button {
     position: absolute;
-
     right: 10px;
     top: 50%;
-
     transform: translateY(-50%);
-
     border: none;
     background: none;
-
     color: #555;
-
     font-size: 16px;
-
     cursor: pointer;
 }
 
@@ -108,13 +100,9 @@ body {
 
 .nav-actions {
     display: flex;
-
     align-items: center;
-
     gap: 25px;
-
     width: 180px;
-
     justify-content: flex-end;
 }
 
@@ -124,23 +112,19 @@ body {
 
 .login-button {
     height: 40px;
-
     padding: 0 18px;
-
     border: none;
     border-radius: 20px;
-
     background-color: #0757b5;
     color: white;
-
     font-size: 12px;
-
     cursor: pointer;
 }
 
 
 .login-button:hover {
     background-color: #064a99;
+    transform: scale(1.05);
 }
 
 
@@ -317,6 +301,14 @@ body {
   transition: background-color 0.6s ease;
 }
 
+.dot-container {
+  text-align: center;
+  z-index: 10;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
 .active, .dot:hover {
   background-color: #717171;
 }
@@ -330,4 +322,85 @@ body {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+/* NOW SHOWING CAROUSEL */
+.carousel-wrapper {
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.now-showing-carousel {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+} /* This makes sure that the cards appeat next to each other and that they can be scrolled horizontally */
+
+.now-showing-carousel {
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* Old Internet Explorer */
+}
+
+.now-showing-carousel::-webkit-scrollbar {
+    display: none;              /* Chrome, Edge, Safari */
+}
+
+.carousel-left, .carousel-right {
+
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #0047ab;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.carousel-left:hover,
+.carousel-right:hover {
+    background: #00337a;
+    transform: scale(1.1);
+}
+
+.movie-card {
+    flex-shrink: 0;
+    position: relative;
+    width: 220px;
+    padding-bottom: 40px;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-button {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    transition: transform 0.2s ease;
+    background-color: #0047ab;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card-button:hover {
+    background-color: #00337a;
+     transform: translateX(-50%) scale(1.05);
 }
