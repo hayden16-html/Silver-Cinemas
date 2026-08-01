@@ -368,6 +368,13 @@ body {
     transform: scale(1.1);
 }
 
+.movie-carousels h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    color: black;
+    text-align: center;
+}
+
 .movie-card {
     flex-shrink: 0;
     position: relative;
