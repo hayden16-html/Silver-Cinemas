@@ -386,6 +386,9 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    padding: 10px;
+    background: linear-gradient(to bottom right, #adadad, #cccccc);
+    border: 0.5px solid black;
 }
 
 .card-button {
@@ -410,4 +413,40 @@ body {
 .card-button:hover {
     background-color: #00337a;
      transform: translateX(-50%) scale(1.05);
+}
+
+.coming-soon-card {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.coming-soon-card img {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    background: linear-gradient(to bottom right, #adadad, #cccccc);
+    border: 1px solid black;
+}
+
+.coming-soon-info {
+    text-align: center;
+    padding: 12px;
+}
+
+.coming-soon-info h3 {
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.release-date {
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.coming-soon-card .card-button {
+    position: static;
+    transform: none;
+    width: 100%;
 }
