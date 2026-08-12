@@ -8,7 +8,7 @@ wrappers.forEach(wrapper => {
     const carousel = wrapper.querySelector(".now-showing-carousel");
 
     // Find all of the movie cards inside this carousel
-    const cards = wrapper.querySelectorAll(".movie-card");
+    const cards = wrapper.querySelectorAll(".movie-card, .coming-soon-card");
 
     // Find the left and right buttons for this carousel
     const leftButton = wrapper.querySelector(".carousel-left");

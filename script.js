@@ -1,12 +1,21 @@
-const menuButton =
-    document.querySelector(".menu-button");
+// Find every menu container on the page
+const menuContainers = document.querySelectorAll(".menu-container");
 
-const menu =
-    document.querySelector(".menu");
+// Set up the menu functionality for each menu container
+menuContainers.forEach(menuContainer => {
 
+    // Find the button inside THIS menu container
+    const menuButton = menuContainer.querySelector(".menu-button");
 
-menuButton.addEventListener("click", function () {
+    // Find the menu inside THIS menu container
+    const menu = menuContainer.querySelector(".menu");
 
-    menu.classList.toggle("menu-open");
+    // When the button is clicked
+    menuButton.addEventListener("click", function () {
+
+        // Open or close the menu
+        menu.classList.toggle("menu-open");
+
+    });
 
 });

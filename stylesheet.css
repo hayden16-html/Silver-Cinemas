@@ -140,29 +140,20 @@ body {
 .menu-button {
     width: 30px;
     height: 30px;
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     gap: 5px;
-
     border: none;
-
     background: transparent;
-
     cursor: pointer;
 }
 
 
 .menu-button span {
     display: block;
-
     width: 29px;
     height: 2px;
-
     background-color: #777;
 }
 
@@ -172,36 +163,24 @@ body {
 
 .menu {
     position: absolute;
-
     top: 45px;
     right: 0;
-
     width: 180px;
-
     display: none;
-
     flex-direction: column;
-
     background-color: white;
-
     border: 1px solid #ccc;
     border-radius: 8px;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-
     overflow: hidden;
-
     z-index: 100;
 }
 
 
 .menu a {
     padding: 14px 18px;
-
     color: #222;
-
     text-decoration: none;
-
     font-size: 14px;
 }
 
@@ -392,7 +371,7 @@ body {
     height: auto;
     display: block;
     padding: 10px;
-    background: linear-gradient(to bottom right, #adadad, #cccccc);
+    background: linear-gradient(to bottom right, #adadad, #cccccc); /* taken from https://www.w3schools.com/css/css3_gradients.asp */
     border: 0.5px solid black;
 }
 
@@ -429,10 +408,10 @@ body {
     width: 100%;
     display: block;
     padding: 10px;
-    background: linear-gradient(to bottom right, #adadad, #cccccc);
+    background: linear-gradient(to bottom right, #adadad, #cccccc); /* taken from https://www.w3schools.com/css/css3_gradients.asp */
     border: 1px solid black;
 }
-
+ 
 .coming-soon-info {
     text-align: center;
     padding: 12px;
