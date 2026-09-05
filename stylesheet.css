@@ -434,3 +434,14 @@ body {
     transform: none;
     width: 100%;
 }
+
+footer {
+    background-color: grey;
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline ;
+    color: black;
+}

@@ -8,7 +8,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Modern Romance:", serif;
+    font-family: "Modern Romance", serif;
 }
 * {
     margin: 0;
@@ -199,13 +199,377 @@ body {
     height: 550px;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    position: relative;
 }
 
-.hero-img-container img {
+.hero-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    margin-top: 3px
+    margin-top: 3px;
+}
+
+.small-poster {
+    position: relative;
+    padding: 10px;
+    background: linear-gradient(to bottom right, #adadad, #cccccc);
+    width: 200px;
+    height: auto;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: -15%;
+}
+
+.movie-description {
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.movie-description img {
+    display:flex;
+    max-height: 100%;
+}
+
+.movie-description h1{
+    font-size: 32px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.movie-text{
+    margin-left: 7%;
+    display: inline-block;
+    width: 93%;
+}
+
+.select-cinema {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0757b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.select-cinema:hover {
+    background-color: #064a99;
+    transform: scale(1.05);
+}
+
+.date-selection {
+    margin-left: 1%;
+}
+
+/* BOOKING DATES */
+
+.booking-dates {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px 3%;
+}
+
+.showtimes {
+    margin-top: 20px;
+    display: block;
+    flex-direction: column;
+}
+
+
+
+.showtime-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.showtime-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+
+/* One row containing Regular + Silver */
+
+.showtime-row {
+    display: flex;
+    gap: 25px;
+}
+
+
+/* Both buttons */
+
+.showtime-button {
+    position: relative;
+    width: 195px;
+    height: 35px;
+    border: none;
+    border-radius: 12px;
+    background-color: #d3d3d3;
+    cursor: pointer;
+    font-family: "Modern Romance", serif;
+}
+
+
+/* Time */
+
+.showtime-button span {
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+
+/* Regular / Silver Class text */
+
+.showtime-button small {
+    display: block;
+    font-size: 8px;
+    line-height: 8px;
+}
+
+
+/* Blue section on Regular buttons */
+
+.showtime-button.regular::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 100%;
+    background-color: #0757b5;
+    border-radius: 12px 0 0 12px;
+}
+
+
+/* Grey/darker section on Silver buttons */
+
+.showtime-button.silver::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 100%;
+    background-color: #aaa;
+    border-radius: 12px 0 0 12px;
+}
+
+
+/* Make the text sit away from the coloured section */
+
+.showtime-button span,
+.showtime-button small {
+    margin-left: 15px;
+}
+
+
+.showtime-button:hover {
+    transform: scale(1.03);
+}
+
+
+/* DATE BUTTONS */
+
+.date-selection {
+    margin-left: 0;
+}
+
+.date-selection h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
+}
+
+.date-button {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+.date-button:hover {
+    text-decoration: underline;
+}
+
+.date-button.active {
+    text-decoration: underline;
+}
+
+
+/* CALENDAR */
+
+.calendar-container {
+    width: 220px;
+    position: relative;
+}
+
+
+/* Calendar icon */
+
+.calendar-toggle {
+    display: block;
+    margin-left: auto;
+    width: 45px;
+    height: 45px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Create the calendar icon using CSS */
+
+.calendar-icon {
+    display: block;
+    width: 32px;
+    height: 30px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+/* Calendar top line */
+
+.calendar-icon::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+
+
+/* Calendar rings */
+
+.calendar-icon::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: -6px;
+    width: 16px;
+    height: 8px;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+}
+
+
+/* Calendar box */
+
+.calendar {
+    margin-top: 8px;
+    width: 220px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Calendar header */
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.calendar-header h3 {
+    font-family: "Modern Romance", serif;
+    font-size: 14px;
+}
+
+
+.calendar-prev,
+.calendar-next {
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.calendar-prev:hover,
+.calendar-next:hover {
+    background-color: #eeeeee;
+    border-radius: 50%;
+}
+
+
+/* Weekdays */
+
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+
+.calendar-weekdays {
+    margin-bottom: 6px;
+}
+
+
+.calendar-weekdays span {
+    font-size: 10px;
+    color: #777;
+}
+
+
+/* Calendar dates */
+
+.calendar-days button {
+    width: 25px;
+    height: 25px;
+
+    margin: 2px auto;
+
+    border: none;
+    border-radius: 50%;
+
+    background: none;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.calendar-days button:hover {
+    background-color: #eeeeee;
+}
+
+
+/* Selected date */
+
+.calendar-days button.selected {
+    background-color: #0757b5;
+    color: white;
+}
+
+
+/* Dates from another month */
+
+.calendar-days button.other-month {
+    color: #bbb;
 }
