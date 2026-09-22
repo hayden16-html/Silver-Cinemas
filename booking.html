@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book your seats | Silver Cinemas</title>
+    <link rel="stylesheet" href="./booking-styles.css">
+</head>
+<body>
+    <header class="booking-header">
+        <a href="./index.html" class="booking-logo">
+            <img src="./assets/Untitled_design-removebg-preview.png" alt="Silver Cinemas">
+        </a>
+        <a class="back-link" href="./index.html">Back to movies</a>
+    </header>
+
+    <main class="booking-shell">
+        <!-- BOOKING INTRODUCTION -->
+        <div class="booking-heading">
+            <p class="eyebrow">Your cinema visit</p>
+            <h1>Build your booking</h1>
+            <p id="booking-details">Choose your seats, then add something delicious for the film.</p>
+        </div>
+
+        <!-- SEAT SELECTION AND BOOKING SUMMARY -->
+        <div class="booking-layout">
+            <section class="booking-panel">
+                <div class="step-heading">
+                    <span class="step-number">1</span>
+                    <div>
+                        <h2>Choose your seats</h2>
+                        <p>Available seats are light. Tap the seats you want to reserve.</p>
+                    </div>
+                </div>
+                <div class="screen">SCREEN</div>
+                <div id="seat-map" class="seat-map" aria-label="Seat selection"></div>
+                <div class="seat-legend">
+                    <span><i class="legend-seat available"></i>Available</span>
+                    <span><i class="legend-seat selected"></i>Selected</span>
+                    <span><i class="legend-seat occupied"></i>Occupied</span>
+                </div>
+            </section>
+
+            <aside class="booking-summary">
+                <div class="summary-block">
+                    <p class="summary-label">Your visit</p>
+                    <h2 id="summary-movie">Movie booking</h2>
+                    <p id="summary-showtime">Select a showtime to begin</p>
+                </div>
+                <div class="summary-block">
+                    <div class="summary-row"><span>Tickets</span><strong id="ticket-total">$0.00</strong></div>
+                    <div class="summary-row"><span>Food & drinks</span><strong id="food-total">$0.00</strong></div>
+                    <div class="summary-total"><span>Total</span><strong id="booking-total">$0.00</strong></div>
+                </div>
+                <div class="summary-block selected-items">
+                    <p class="summary-label">Selected seats</p>
+                    <p id="selected-seats">No seats selected</p>
+                    <p class="summary-label food-label">Food & drinks</p>
+                    <div id="selected-food">No extras yet</div>
+                </div>
+                <button id="continue-button" class="primary-button" type="button" disabled>Continue to food & drinks</button>
+            </aside>
+        </div>
+
+        <!-- FOOD AND DRINK SELECTION -->
+        <section id="concessions" class="booking-panel concessions-panel" hidden>
+            <div class="step-heading">
+                <span class="step-number">2</span>
+                <div>
+                    <h2>Food & drinks</h2>
+                    <p>Add treats to collect at the cinema, or continue without extras.</p>
+                </div>
+            </div>
+            <div id="concession-list" class="concession-list"></div>
+            <button id="review-button" class="primary-button" type="button">Review booking</button>
+        </section>
+
+        <!-- BOOKING REVIEW -->
+        <section id="review" class="booking-panel review-panel" hidden>
+            <div class="step-heading">
+                <span class="step-number">3</span>
+                <div>
+                    <h2>Review your booking</h2>
+                    <p>Everything looks good? Confirm this demo booking below.</p>
+                </div>
+            </div>
+            <div id="review-content" class="review-content"></div>
+            <button id="confirm-button" class="primary-button" type="button">Confirm booking</button>
+        </section>
+
+        <!-- BOOKING CONFIRMATION -->
+        <section id="confirmation" class="confirmation-panel" hidden>
+            <p class="eyebrow">Booking confirmed</p>
+            <h2 id="confirmation-title">Enjoy the show.</h2>
+            <p id="confirmation-details"></p>
+            <a class="primary-button" href="./index.html">Browse more films</a>
+        </section>
+    </main>
+    <script src="./booking.js"></script>
+</body>
+</html>
