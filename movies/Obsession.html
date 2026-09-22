@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spider-Man: Brand New Day</title>
+
+    <link rel="stylesheet" href="../movie-styles.css">
+</head>
+
+
+<body>
+
+    <header class="navbar">
+
+        <!-- Silver Cinemas logo -->
+        <a href="../index.html" class="logo">
+            <img src="../assets/Untitled_design-removebg-preview.png" alt="Silver Cinemas">
+        </a>
+
+
+        <!-- Search bar -->
+        <div class="search-container">
+
+            <input
+                type="text"
+                placeholder="Search for a movie"
+            >
+
+            <button class="clear-button">
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- Right side of navigation -->
+        <div class="nav-actions">
+
+            <!-- Login button -->
+            <button class="login-button">
+                Login/Sign up
+            </button>
+
+
+            <!-- Hamburger menu -->
+            <div class="menu-container">
+
+                <button class="menu-button" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+
+                <!-- Menu links -->
+                <nav class="menu">
+                    <a href="../index.html">Home</a>
+                    <a href="../Food&Drinks.html">Food & Drinks</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="hero-img-container">
+            <img src="../assets/Spider man slider.webp" alt="Spider man: A brand New Day poster" class="hero-img">            
+        </div>
+        <div class="movie-description">
+            <img src="../assets/Spider man poster.webp" alt="Spider man: A brand New Day poster" class="small-poster">
+            <div class="movie-text">
+                <h1>Spider-Man: Brand New Day</h1>
+                <p>A forgotten Peter Parker lives alone as a full-time Spider-Man until mounting pressure triggers a dangerous change and a powerful new enemy emerges.</p>
+            </div>
+        </div>
+        <button class="select-cinema">Select Cinema</button>
+        <div style="background-color: black; height: 2px;"></div>
+        <div class="booking-dates">
+
+    <!-- Dates displayed above the showtimes -->
+    <div class="date-selection">
+        <h2>
+            <button class="date-button active">MON 15 JUN</button>
+            <span>|</span>
+            <button class="date-button">TUE 16 JUN</button>
+            <span>|</span>
+            <button class="date-button">WED 17 JUN</button>
+        </h2>
+            <div class="showtimes">
+                <h2>Showtimes</h2>
+                <div class="showtime-buttons">
+
+                    <div class="showtime-row">
+                        <button class="showtime-button regular">
+                            <span>08:00 AM</span>
+                            <small>Regular</small>
+                        </button>
+
+                        <button class="showtime-button silver">
+                            <span>08:00 AM</span>
+                            <small>Silver Class</small>
+                        </button>
+                    </div>
+
+                    <div class="showtime-row">
+                        <button class="showtime-button regular">
+                            <span>11:00 AM</span>
+                            <small>Regular</small>
+                        </button>
+
+                        <button class="showtime-button silver">
+                            <span>11:00 AM</span>
+                            <small>Silver Class</small>
+                        </button>
+                    </div>
+
+                    <div class="showtime-row">
+                        <button class="showtime-button regular">
+                            <span>02:00 PM</span>
+                            <small>Regular</small>
+                        </button>
+
+                        <button class="showtime-button silver">
+                            <span>02:00 PM</span>
+                            <small>Silver Class</small>
+                        </button>
+                    </div>
+
+                    <div class="showtime-row">
+                        <button class="showtime-button regular">
+                            <span>05:00 PM</span>
+                            <small>Regular</small>
+                        </button>
+
+                        <button class="showtime-button silver">
+                            <span>05:00 PM</span>
+                            <small>Silver Class</small>
+                        </button>
+                    </div>
+
+                    <div class="showtime-row">
+                        <button class="showtime-button regular">
+                            <span>08:00 PM</span>
+                            <small>Regular</small>
+                        </button>
+
+                        <button class="showtime-button silver">
+                            <span>08:00 PM</span>
+                            <small>Silver Class</small>
+                        </button>
+                    </div>
+
+                    <div class="showtime-row">
+                        <button class="showtime-button regular">
+                            <span>11:00 PM</span>
+                            <small>Regular</small>
+                        </button>
+
+                        <button class="showtime-button silver">
+                            <span>11:00 PM</span>
+                            <small>Silver Class</small>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            </div>
+             <!-- Calendar -->
+    <div class="calendar-container">
+        <!-- Calendar icon -->
+        <button class="calendar-toggle" aria-label="Open calendar">
+            <span class="calendar-icon"></span>
+        </button>
+
+        <div class="calendar">
+            <!-- Calendar header -->
+            <div class="calendar-header">
+                <button class="calendar-prev">
+                    &#10094;
+                </button>
+                <h3 id="calendar-month">June 2026</h3>
+                <button class="calendar-next">
+                    &#10095;
+                </button>
+            </div>
+            <!-- Days of the week -->
+            <div class="calendar-weekdays">
+                <span>Su</span>
+                <span>Mo</span>
+                <span>Tu</span>
+                <span>We</span>
+                <span>Th</span>
+                <span>Fr</span>
+                <span>Sa</span>
+            </div>
+            <!-- Calendar dates -->
+            <div class="calendar-days" id="calendar-days"></div>
+        </div>
+    </div>
+    </div>
+
+
+   
+
+</div>
+    </main>
+    <script src="../script.js"></script>
+    <script src="../calendar.js"></script>
+</body>

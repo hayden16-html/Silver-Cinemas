@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Cinemas</title>
+
+    <link rel="stylesheet" href="./stylesheet.css">
+
+</head>
+<body>
+    
+    <header class="navbar">
+
+        <!-- Silver Cinemas logo -->
+        <a href="index.html" class="logo">
+            <img src="./assets/Untitled_design-removebg-preview.png" alt="Silver Cinemas">
+        </a>
+
+
+        <!-- Search bar -->
+        <div class="search-container">
+
+            <input
+                type="text"
+                placeholder="Search for a movie"
+            >
+
+            <button class="clear-button">
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- Right side of navigation -->
+        <div class="nav-actions">
+
+            <!-- Login button -->
+            <button class="login-button">
+                Login/Sign up
+            </button>
+
+
+            <!-- Hamburger menu -->
+            <div class="menu-container">
+
+                <button
+                    class="menu-button"
+                    aria-label="Open menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+
+                <!-- Menu links -->
+                <nav class="menu">
+
+                    <a href="./index.html">Home</a>
+
+                    <a href="./Food&Drinks.html">Food & Drinks</a>
+
+                    <a href="./about.html">About Us</a>
+
+                    <a href="./contact.html">Contact</a>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="FD-hero-image">
+        <img src="./assets/Food & Drinks image.png" alt="Food & Drinks">
+    </div>
+
+    <div class="food-categories">
+
+    <button class="category-button active" data-category="combos">
+        Combos
+    </button>
+
+    <span>|</span>
+
+    <button class="category-button" data-category="popcorn">
+        Popcorn
+    </button>
+
+    <span>|</span>
+
+    <button class="category-button" data-category="drinks">
+        Drinks
+    </button>
+
+    <span>|</span>
+
+    <button class="category-button" data-category="food">
+        Food
+    </button>
+
+    <span>|</span>
+
+    <button class="category-button" data-category="confectionery">
+        Confectionery
+    </button>
+
+</div>
+
+
+<!-- PRODUCT AREA -->
+
+<div class="product-section">
+
+    <!-- COMBOS -->
+    <div class="product-category" id="combos">
+
+        <article class="product-card">
+            <img src="assets/small-combo.png" alt="Small water combo">
+            <h2>Small water combo</h2>
+        </article>
+
+        <article class="product-card">
+            <img src="./assets/medium-combo.png" alt="Medium water combo">
+            <h2>Medium water combo</h2>
+        </article>
+
+        <article class="product-card">
+            <img src="./assets/large-combo.png" alt="Large water combo">
+            <h2>Large water combo</h2>
+        </article>
+
+        <article class="product-card">
+            <img src="assets/small-combo.png" alt="Small water combo">
+            <h2>Small drink combo</h2>
+        </article>
+
+        <article class="product-card">
+            <img src="./assets/medium-combo.png" alt="Medium water combo">
+            <h2>Medium drink combo</h2>
+        </article>
+
+    </div>
+
+
+    <!-- POPCORN -->
+    <div class="product-category" id="popcorn">
+
+        <article class="product-card">
+            <img src="./assets/small-popcorn.webp" alt="Small popcorn">
+            <h2>Small popcorn</h2>
+        </article>
+
+        <article class="product-card">
+            <img src="./assets/medium-popcorn.webp" alt="Medium popcorn">
+            <h2>Medium popcorn</h2>
+        </article>
+
+        <article class="product-card">
+            <img src="./assets/large-popcorn.webp" alt="Large popcorn">
+            <h2>Large popcorn</h2>
+        </article>
+
+    </div>
+
+
+    <!-- DRINKS -->
+    <div class="product-category" id="drinks">
+
+        <article class="product-card">
+            <img src="./assets/small-drink.webp" alt="Small drink">
+            <h2>Small drink</h2>
+        </article>
+
+        <article class="product-card">
+            <img src="./assets/medium-drink.webp" alt="Medium drink">
+            <h2>Medium drink</h2>
+        </article>
+    </div>
+
+</div>    
+</body>
+<script src="./food&drinks.js"></script>
+</html>
