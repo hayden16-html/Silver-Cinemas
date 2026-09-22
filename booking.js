@@ -35,7 +35,7 @@ const concessions = [
 const selectedSeats = new Set();
 const foodQuantities = Object.fromEntries(concessions.map(item => [item.id, 0]));
 const occupiedSeats = new Set(["A3", "B6", "C2", "D5", "E1", "F7"]);
-const currency = value => `£${value.toFixed(2)}`;
+const currency = value => `NZ$${value.toFixed(2)}`;
 
 // Load food selected earlier on the Food & Drinks page.
 try {

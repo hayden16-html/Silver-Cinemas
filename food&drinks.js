@@ -51,7 +51,7 @@ function updateCartSummary() {
     const count = cart.reduce((total, item) => total + item.quantity, 0);
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     document.querySelector("#food-cart-count").textContent = `${count} item${count === 1 ? "" : "s"}`;
-    document.querySelector("#food-cart-total").textContent = `£${total.toFixed(2)}`;
+    document.querySelector("#food-cart-total").textContent = `NZ$${total.toFixed(2)}`;
 }
 
 // Add a price and Add button to every product card.
@@ -60,7 +60,7 @@ document.querySelectorAll(".product-card").forEach(card => {
     const price = prices[name];
     const details = document.createElement("div");
     details.className = "product-details";
-    details.innerHTML = `<span>£${price.toFixed(2)}</span><button type="button" class="add-product">Add</button>`;
+    details.innerHTML = `<span>NZ$${price.toFixed(2)}</span><button type="button" class="add-product">Add</button>`;
     details.querySelector(".add-product").addEventListener("click", () => addToCart(name, price));
     card.append(details);
 });
@@ -68,7 +68,7 @@ document.querySelectorAll(".product-card").forEach(card => {
 // Create the basket summary before the product categories.
 const cartSummary = document.createElement("aside");
 cartSummary.className = "food-cart-summary";
-cartSummary.innerHTML = `<strong>Booking extras</strong><span id="food-cart-count">0 items</span><strong id="food-cart-total">£0.00</strong><a href="./booking.html">Continue</a>`;
+cartSummary.innerHTML = `<strong>Booking extras</strong><span id="food-cart-count">0 items</span><strong id="food-cart-total">NZ$0.00</strong><a href="./booking.html">Continue</a>`;
 document.querySelector(".product-section").before(cartSummary);
 updateCartSummary();
 
