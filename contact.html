@@ -3,21 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
     <title>Contact Us</title>
 </head>
+
+
 <body>
-    <!-- modify this form HTML and place wherever you want your form -->
-<form action="https://formspree.io/f/myeygqaw" method="POST">
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+
+<header class="navbar">
+
+        <!-- Silver Cinemas logo -->
+        <a href="index.html" class="logo">
+            <img src="./assets/Untitled_design-removebg-preview.png" alt="Silver Cinemas">
+        </a>
+
+
+        <!-- Search bar -->
+        <div class="search-container">
+
+            <input
+                type="text"
+                placeholder="Search for a movie"
+            >
+
+            <button class="clear-button">
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- Right side of navigation -->
+        <div class="nav-actions">
+
+            <!-- Login button -->
+            <button class="login-button">
+                Login/Sign up
+            </button>
+
+
+            <!-- Hamburger menu -->
+            <div class="menu-container">
+
+                <button
+                    class="menu-button"
+                    aria-label="Open menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+
+                <!-- Menu links -->
+                <nav class="menu">
+
+                    <a href="./index.html">Home</a>
+
+                    <a href="./Food&Drinks.html">Food & Drinks</a>
+
+                    <a href="./about.html">About Us</a>
+
+                    <a href="./contact.html">Contact</a>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or inquiries, please fill out the form below and we will get back to you as soon as possible.</p>
+    </section>
+    
+<div class="contact-form">
+      <!-- modify this form HTML and place wherever you want your form -->
+  <form action="https://formspree.io/f/myeygqaw" method="POST">
+    <h2>Contact Us</h2>
+    <label>
+      Your name:
+      <input type="text" name="name">
+    </label>
+    <label>
+      Your email:
+      <input type="email" name="email">
+    </label>
+    <label>
+      Your message:
+      <textarea name="message"></textarea>
+    </label>
+    <!-- your other form fields go here -->
+    <button type="submit">Send</button>
+  </form>
+</div>
 </body>
 </html>
