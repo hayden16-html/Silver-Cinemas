@@ -95,6 +95,38 @@ body {
     cursor: pointer;
 }
 
+.search-results {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    max-height: 280px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+    z-index: 1000;
+}
+
+.search-result,
+.search-no-results {
+    display: block;
+    padding: 11px 14px;
+    color: #222;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.search-result:hover,
+.search-result.active {
+    background: #f0f4fa;
+}
+
+.search-no-results {
+    color: #666;
+}
+
 
 
 /* RIGHT SIDE */
@@ -543,6 +575,25 @@ footer a {
     text-decoration: none;
 }
 
+.clear-food-cart {
+    border: 1px solid #0757b5;
+    border-radius: 5px;
+    padding: 7px 11px;
+    background: white;
+    color: #0757b5;
+    cursor: pointer;
+}
+
+.clear-food-cart:hover:not(:disabled) {
+    background: #eaf1fa;
+}
+
+.clear-food-cart:disabled {
+    border-color: #b6bec7;
+    color: #8a929b;
+    cursor: not-allowed;
+}
+
 .food-cart-summary {
     display: flex;
     align-items: center;
@@ -573,20 +624,28 @@ footer a {
 
 
 /* CONTACT PAGE STYLES */
+.contact-wrapper {
+    max-width: 100%;
+    height: 100%;
+    background-image: url("./assets/2ca81d33-20f4-47fa-86e8-7faac32f08c5.jpg");
 
+}
 .contact-section {
-    padding: 40px 4%;
+    padding: 20px 4%;
     text-align: center;
+}
+
+.contact-section h1, p {
+    color: white;
 }
 
 .contact-form {
     max-width: 600px;
-    margin: 40px auto;
+    margin: 10px auto;
+    margin-bottom: 40px;
     padding: 30px;
-
     border: 1px solid #ccc;
     border-radius: 8px;
-
     background-color: #f9f9f9;
 }
 
@@ -677,3 +736,247 @@ footer a {
     background-color: #064a99;
     transform: scale(1.05);
 }
+
+/* About page styles */
+
+.top-image {
+    background-image: url("./assets/mermyhh-movie-theater-2093264_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    background-repeat: no-repeat;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 25px;
+}
+
+
+#About-Us-Heading {
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #0757b5;
+    -webkit-text-stroke: 1px white;
+    text-align: center;
+    width: 100%;
+}
+
+.about-us-text {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    
+}
+
+.about-us-text h2 {
+    color: #074c9b;
+    margin-bottom: 5px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.about-us-text p {
+    color: black;
+    margin-bottom: 15px;
+}
+
+/* RESPONSIVE LAYOUT ADJUSTMENTS */
+@media (max-width: 760px) {
+    .navbar {
+        height: auto;
+        min-height: 68px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 4%;
+    }
+
+    .logo,
+    .nav-actions {
+        width: auto;
+    }
+
+    .search-container {
+        width: min(335px, 44vw);
+    }
+
+    .nav-actions {
+        gap: 14px;
+    }
+
+    .mySlides img,
+    .FD-hero-image {
+        height: clamp(260px, 58vw, 450px);
+    }
+
+    .carousel-wrapper {
+        gap: 10px;
+    }
+
+    .carousel-left,
+    .carousel-right {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .food-categories {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        font-size: clamp(18px, 3.5vw, 26px);
+    }
+
+    .category-button {
+        font-size: inherit;
+    }
+
+    .product-category {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .product-card {
+        width: min(200px, calc(50% - 12px));
+    }
+
+    .food-cart-summary {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .food-cart-summary a {
+        margin-left: 0;
+    }
+
+    .top-image {
+        height: clamp(250px, 45vw, 400px);
+    }
+
+    #About-Us-Heading {
+        font-size: clamp(3rem, 9vw, 5rem);
+    }
+}
+
+@media (max-width: 520px) {
+    .navbar {
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px 4%;
+    }
+
+    .logo img {
+        width: 105px;
+    }
+
+    .search-container {
+        order: 3;
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .login-button {
+        height: 36px;
+        padding: 0 12px;
+    }
+
+    .mySlides img,
+    .FD-hero-image {
+        height: 250px;
+    }
+
+    .prev,
+    .next {
+        padding: 11px;
+        font-size: 16px;
+    }
+
+    .carousel-wrapper {
+        gap: 6px;
+    }
+
+    .carousel-left,
+    .carousel-right {
+        width: 32px;
+        height: 32px;
+        font-size: 17px;
+    }
+
+    .movie-carousels h2 {
+        font-size: 27px;
+    }
+
+    .movie-card,
+    .coming-soon-card {
+        width: 180px;
+    }
+
+    .food-categories {
+        padding: 16px 4%;
+        gap: 6px;
+        font-size: 17px;
+    }
+
+    .product-category {
+        gap: 12px;
+        padding: 16px 4%;
+    }
+
+    .product-card {
+        width: calc(50% - 6px);
+        padding: 10px;
+    }
+
+    .product-card img {
+        height: clamp(140px, 48vw, 210px);
+    }
+
+    .product-card h2 {
+        font-size: 16px;
+    }
+
+    .product-details {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .food-cart-summary {
+        margin: 0 4%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .food-booking-link {
+        margin-top: 16px;
+    }
+
+    .contact-form {
+        width: calc(100% - 32px);
+        padding: 20px;
+    }
+
+    .about-us-text {
+        margin: 0 16px;
+        padding: 0 14px;
+        font-size: 1rem;
+    }
+
+    footer .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 14px;
+    }
+}
+

@@ -52,6 +52,13 @@ function updateCartSummary() {
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     document.querySelector("#food-cart-count").textContent = `${count} item${count === 1 ? "" : "s"}`;
     document.querySelector("#food-cart-total").textContent = `NZ$${total.toFixed(2)}`;
+    document.querySelector("#clear-food-cart").disabled = count === 0;
+}
+
+function clearCart() {
+    // Remove all saved food extras and refresh the visible basket summary.
+    localStorage.removeItem("silverCart");
+    updateCartSummary();
 }
 
 // Add a price and Add button to every product card.
@@ -68,8 +75,9 @@ document.querySelectorAll(".product-card").forEach(card => {
 // Create the basket summary before the product categories.
 const cartSummary = document.createElement("aside");
 cartSummary.className = "food-cart-summary";
-cartSummary.innerHTML = `<strong>Booking extras</strong><span id="food-cart-count">0 items</span><strong id="food-cart-total">NZ$0.00</strong><a href="./booking.html">Continue</a>`;
+cartSummary.innerHTML = `<strong>Booking extras</strong><span id="food-cart-count">0 items</span><strong id="food-cart-total">NZ$0.00</strong><button id="clear-food-cart" class="clear-food-cart" type="button">Clear cart</button><a href="./booking.html">Continue</a>`;
 document.querySelector(".product-section").before(cartSummary);
+document.querySelector("#clear-food-cart").addEventListener("click", clearCart);
 updateCartSummary();
 
 // Switch between the different food categories.

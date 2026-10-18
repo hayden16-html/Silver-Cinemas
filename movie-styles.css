@@ -23,6 +23,17 @@ body {
     overflow-x: hidden;
 }
 
+footer {
+    background-color: grey;
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline;
+    color: black;
+}
+
 
 
 /* NAVIGATION BAR*/
@@ -93,6 +104,38 @@ body {
     color: #555;
     font-size: 16px;
     cursor: pointer;
+}
+
+.search-results {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    max-height: 280px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+    z-index: 1000;
+}
+
+.search-result,
+.search-no-results {
+    display: block;
+    padding: 11px 14px;
+    color: #222;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.search-result:hover,
+.search-result.active {
+    background: #f0f4fa;
+}
+
+.search-no-results {
+    color: #666;
 }
 
 
@@ -334,8 +377,8 @@ body {
 
 .showtime-button small {
     display: block;
-    font-size: 8px;
-    line-height: 8px;
+    font-size: 12px;
+    line-height: 12px;
 }
 
 
@@ -572,4 +615,158 @@ body {
 
 .calendar-days button.other-month {
     color: #bbb;
+}
+
+/* RESPONSIVE LAYOUT ADJUSTMENTS */
+@media (max-width: 760px) {
+    .navbar {
+        height: auto;
+        min-height: 68px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 4%;
+    }
+
+    .logo,
+    .nav-actions {
+        width: auto;
+    }
+
+    .search-container {
+        width: min(335px, 44vw);
+    }
+
+    .nav-actions {
+        gap: 14px;
+    }
+
+    .hero-img-container {
+        height: clamp(280px, 60vw, 480px);
+    }
+
+    .movie-description {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .small-poster {
+        flex: 0 0 180px;
+        width: 180px;
+        margin-top: -12%;
+    }
+
+    .movie-text {
+        width: auto;
+        margin-left: 0;
+    }
+
+    .booking-dates {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .date-selection {
+        flex: 1 1 360px;
+        min-width: 0;
+    }
+
+    .calendar-container {
+        margin-left: auto;
+    }
+
+    .showtime-row {
+        gap: 12px;
+    }
+
+    .showtime-button {
+        width: min(195px, calc(50vw - 45px));
+    }
+}
+
+@media (max-width: 520px) {
+    .navbar {
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px 4%;
+    }
+
+    .logo img {
+        width: 105px;
+    }
+
+    .search-container {
+        order: 3;
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .login-button {
+        height: 36px;
+        padding: 0 12px;
+    }
+
+    .hero-img-container {
+        height: 280px;
+    }
+
+    .movie-description {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .small-poster {
+        flex: 0 0 auto;
+        width: min(180px, 55vw);
+        margin-top: -24%;
+    }
+
+    .movie-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .movie-description h1 {
+        font-size: clamp(26px, 7vw, 32px);
+    }
+
+    .booking-dates {
+        flex-direction: column;
+        padding: 15px 4%;
+    }
+
+    .date-selection {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .date-selection h2 {
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: clamp(17px, 5vw, 24px);
+    }
+
+    .showtime-row {
+        gap: 8px;
+    }
+
+    .showtime-button {
+        width: calc(50% - 4px);
+    }
+
+    .calendar-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calendar-toggle {
+        margin-left: 0;
+    }
 }

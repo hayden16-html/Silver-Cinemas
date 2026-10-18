@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>About Us</title>
 </head>
+
+<header class="navbar">
+
+    <!-- Silver Cinemas logo -->
+    <a href="index.html" class="logo">
+        <img src="./assets/Untitled_design-removebg-preview.png" alt="Silver Cinemas">
+    </a>
+    <!-- Search bar -->
+    <div class="search-container">
+        <input
+            type="text"
+            placeholder="Search for a movie"
+        >
+        <button class="clear-button">
+            ×
+        </button>
+    </div>
+    <!-- Right side of navigation -->
+    <div class="nav-actions">
+        <!-- Login button -->
+        <button class="login-button">
+            Login/Sign up
+        </button>
+        <!-- Hamburger menu -->
+        <div class="menu-container">
+            <button
+                class="menu-button"
+                aria-label="Open menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- Menu links -->
+            <nav class="menu">
+                <a href="./index.html">Home</a>
+                <a href="./Food&Drinks.html">Food & Drinks</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contact.html">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+</header>
+
 <body>
+    <div class="top-image">
+        <h1 id="About-Us-Heading">About Us</h1>
+    </div>
+        <div class="about-us-text">
+            <h2>Our Goal</h2>
+            <p>At Silver Cinemas, we believe that going to the movies should be an unforgettable experience. Our goal is to bring people together through the magic of cinema, offering a wide selection of the latest blockbusters, exciting upcoming releases, and a comfortable environment for everyone to enjoy. Whether you're watching the newest action-packed adventure, enjoying a family movie, or discovering something completely new, Silver Cinemas is here to make every visit special. With convenient online booking, a variety of delicious snacks and drinks, and a passion for bringing stories to life on the big screen, we're dedicated to making your next movie experience one to remember.</p>
+        </div>
     
+    <script src="search.js"></script>
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2026 Silver Cinemas. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./terms.html">Terms of Service</a>
+        </div>
+    </footer>
 </body>
 </html>
