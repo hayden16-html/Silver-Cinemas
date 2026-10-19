@@ -1,3 +1,4 @@
+// These functions open the matching movie page from its home-page card.
 function OpenBackrooms() {
     window.open("movies/Backrooms.html", "_self");
 }

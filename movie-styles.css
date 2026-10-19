@@ -312,6 +312,7 @@ footer a {
 
 /* BOOKING DATES */
 
+/* Date choices, showtimes, and the calendar share this layout. */
 .booking-dates {
     position: relative;
     display: flex;
@@ -617,6 +618,7 @@ footer a {
     color: #bbb;
 }
 
+/* These breakpoints stack movie and booking details on smaller screens. */
 /* RESPONSIVE LAYOUT ADJUSTMENTS */
 @media (max-width: 760px) {
     .navbar {

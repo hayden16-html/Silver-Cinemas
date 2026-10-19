@@ -4,6 +4,7 @@ const calendarMonth = document.querySelector("#calendar-month");
 const previousButton = document.querySelector(".calendar-prev");
 const nextButton = document.querySelector(".calendar-next");
 
+// Start the calendar at June 2026 with the 15th selected.
 let currentDate = new Date(2026, 5, 1);
 
 
@@ -29,7 +30,7 @@ function createCalendar() {
     calendarMonth.textContent = `${monthName} ${year}`;
 
 
-    // Find the first day of the month
+    // Find the weekday of the month's first date.
     const firstDay = new Date(year, month, 1).getDay();
 
 
@@ -123,7 +124,7 @@ function updateDateSelection() {
     const selectedDay = selectedDate.getDate();
 
 
-    // For now, update the first date button
+    // Show the chosen date in the first date button.
     dateButtons[0].textContent =
         selectedDate.toLocaleDateString("en-NZ", {
             weekday: "short",

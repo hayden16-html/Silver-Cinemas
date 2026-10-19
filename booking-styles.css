@@ -36,6 +36,7 @@ h2 { margin: 0; font-size: 28px; }
 .step-heading p { margin: 5px 0 0; }
 .step-number { display: grid; place-items: center; width: 32px; height: 32px; flex: 0 0 32px; border-radius: 50%; background: var(--blue); color: white; font-weight: bold; }
 /* SEAT MAP */
+/* The seat map uses one label column followed by eight seats per row. */
 .screen { width: 80%; margin: 0 auto 34px; padding: 9px; border-radius: 50% 50% 0 0; background: #e9edf1; color: var(--muted); text-align: center; font-size: 11px; letter-spacing: .16em; }
 .seat-map { display: grid; gap: 12px; max-width: 500px; margin: auto; }
 .seat-row { display: grid; grid-template-columns: 24px repeat(8, minmax(28px, 1fr)); gap: 8px; align-items: center; }
@@ -63,6 +64,7 @@ h2 { margin: 0; font-size: 28px; }
 .concessions-panel, .review-panel, .confirmation-panel { margin-top: 24px; }
 .concession-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 22px; }
 /* FOOD AND DRINK CARDS */
+/* Food cards show each item, its description, price, and quantity controls. */
 .concession-card { display: flex; min-height: 145px; flex-direction: column; justify-content: space-between; padding: 18px; border: 1px solid var(--line); border-radius: 6px; }
 .concession-card h3 { margin: 4px 0 8px; font-size: 22px; }
 .concession-description { margin: 0 0 10px; color: var(--muted); font-size: 14px; line-height: 1.45; }
@@ -81,6 +83,7 @@ h2 { margin: 0; font-size: 28px; }
 [hidden] { display: none; }
 
 /* MOBILE LAYOUT */
+/* Stack booking sections and concession cards on smaller screens. */
 @media (max-width: 780px) {
     .booking-shell { padding-top: 34px; }
     .booking-layout { grid-template-columns: 1fr; }

@@ -34,6 +34,7 @@ const concessions = [
 // Store the seats and food quantities selected by the customer.
 const selectedSeats = new Set();
 const foodQuantities = Object.fromEntries(concessions.map(item => [item.id, 0]));
+// These seats are unavailable in this sample cinema layout.
 const occupiedSeats = new Set(["A3", "B6", "C2", "D5", "E1", "F7"]);
 const currency = value => `NZ$${value.toFixed(2)}`;
 
@@ -66,6 +67,7 @@ function renderSeats() {
     seatMap.querySelectorAll(".seat.available").forEach(seatButton => {
         seatButton.addEventListener("click", () => {
             const seat = seatButton.dataset.seat;
+            // Clicking a seat adds it to or removes it from the selection.
             selectedSeats.has(seat) ? selectedSeats.delete(seat) : selectedSeats.add(seat);
             renderSeats();
             updateSummary();
@@ -100,6 +102,7 @@ function renderConcessions() {
         button.addEventListener("click", () => {
             const itemId = button.dataset.id;
             const adjustment = button.dataset.action === "increase" ? 1 : -1;
+            // Do not allow the quantity to drop below zero.
             foodQuantities[itemId] = Math.max(0, foodQuantities[itemId] + adjustment);
             document.querySelector(`#quantity-${itemId}`).textContent = foodQuantities[itemId];
             updateSummary();

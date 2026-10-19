@@ -1,4 +1,5 @@
-// Search the movies available on the site and navigate to the selected title.
+// Search the movies available on the site and open the selected title.
+// Keep the movie names and aliases in one list for matching.
 const movieSearchCatalog = [
     { title: "The Backrooms", aliases: ["Backrooms"], path: "Backrooms.html" },
     { title: "Disclosure Day", aliases: ["Disclosure"], path: "Disclosure-Day.html" },
@@ -12,6 +13,7 @@ const movieSearchCatalog = [
 ];
 
 const normalizeMovieSearch = value => value.toLowerCase().replace(/[^a-z0-9]/g, "");
+// Use a different link prefix depending on the current page folder.
 const searchIsOnMoviePage = window.location.pathname.includes("/movies/");
 const moviePagePrefix = searchIsOnMoviePage ? "" : "movies/";
 
@@ -35,6 +37,7 @@ document.querySelectorAll(".search-container").forEach(container => {
     let activeResultIndex = -1;
     let currentMatches = [];
 
+    // Open the matching movie page from either a suggestion or the keyboard.
     function navigateToMovie(movie) {
         window.location.href = `${moviePagePrefix}${movie.path}`;
     }
@@ -56,6 +59,7 @@ document.querySelectorAll(".search-container").forEach(container => {
             return;
         }
 
+        // Match titles and aliases, then show title matches before partial matches.
         currentMatches = movieSearchCatalog.filter(movie =>
             [movie.title, ...movie.aliases].some(name => normalizeMovieSearch(name).includes(query))
         ).sort((a, b) => {
@@ -99,6 +103,7 @@ document.querySelectorAll(".search-container").forEach(container => {
     }
 
     input.addEventListener("input", renderResults);
+    // Let visitors choose a suggestion without using the mouse.
     input.addEventListener("keydown", event => {
         if (event.key === "ArrowDown" && currentMatches.length) {
             event.preventDefault();
@@ -126,6 +131,7 @@ document.querySelectorAll(".search-container").forEach(container => {
     }
 
     document.addEventListener("click", event => {
+        // Close the suggestion list when the click is outside the search box.
         if (!container.contains(event.target)) closeResults();
     });
 });

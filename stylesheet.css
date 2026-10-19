@@ -339,10 +339,10 @@ body {
 /* NOW SHOWING CAROUSEL */
 .carousel-wrapper {
     display:flex;
-    align-items:center;
     gap:20px;
 }
 
+/* Movie cards stay in one row and scroll horizontally. */
 .now-showing-carousel {
     display: flex;
     gap: 20px;
@@ -352,7 +352,7 @@ body {
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     scroll-padding-left: 0;
-} /* This makes sure that the cards appeat next to each other and that they can be scrolled horizontally */
+}
 
 .now-showing-carousel {
     scrollbar-width: none;      /* Firefox */
@@ -524,10 +524,10 @@ footer a {
     text-decoration: underline;
 }
 
-
+/* Product cards in each group are arranged in a row. */
 .product-category {
     display: flex;
-    gap: 25px;
+    gap: 25px; 
     padding: 20px 4%;
 }
 
@@ -788,6 +788,7 @@ footer a {
 }
 
 /* RESPONSIVE LAYOUT */
+/* These breakpoints rearrange existing sections on smaller screens. */
 @media (max-width: 760px) {
     .navbar {
         height: auto;
