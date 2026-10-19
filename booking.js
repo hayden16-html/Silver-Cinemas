@@ -18,17 +18,17 @@ const confirmationPanel = document.querySelector("#confirmation");
 
 // These are the food and drink choices available during booking.
 const concessions = [
-    { id: "small-water-combo", name: "Small water combo", price: 7, category: "Combos" },
-    { id: "medium-water-combo", name: "Medium water combo", price: 9, category: "Combos" },
-    { id: "large-water-combo", name: "Large water combo", price: 11, category: "Combos" },
-    { id: "small-drink-combo", name: "Small drink combo", price: 8, category: "Combos" },
-    { id: "medium-drink-combo", name: "Medium drink combo", price: 10, category: "Combos" },
-    { id: "small-popcorn", name: "Small popcorn", price: 4.5, category: "Popcorn" },
-    { id: "medium-popcorn", name: "Medium popcorn", price: 5.5, category: "Popcorn" },
-    { id: "small-drink", name: "Small drink", price: 3.5, category: "Drinks" },
-    { id: "medium-drink", name: "Medium drink", price: 4.5, category: "Drinks" },
-    { id: "nachos-with-cheese", name: "Nachos with cheese", price: 6, category: "Food" },
-    { id: "chocolate", name: "Chocolate", price: 3, category: "Confectionery" }
+    { id: "small-water-combo", name: "Small water combo", description: "Includes 1 bottled water and 1 small popcorn.", price: 7, category: "Combos" },
+    { id: "medium-water-combo", name: "Medium water combo", description: "Includes 1 bottled water and 1 medium popcorn.", price: 9, category: "Combos" },
+    { id: "large-water-combo", name: "Large water combo", description: "Includes 1 bottled water and 1 large popcorn.", price: 11, category: "Combos" },
+    { id: "small-drink-combo", name: "Small drink combo", description: "Includes 1 small drink and 1 small popcorn.", price: 8, category: "Combos" },
+    { id: "medium-drink-combo", name: "Medium drink combo", description: "Includes 1 medium drink and 1 medium popcorn.", price: 10, category: "Combos" },
+    { id: "small-popcorn", name: "Small popcorn", description: "1 serving of small popcorn.", price: 4.5, category: "Popcorn" },
+    { id: "medium-popcorn", name: "Medium popcorn", description: "1 serving of medium popcorn.", price: 5.5, category: "Popcorn" },
+    { id: "small-drink", name: "Small drink", description: "1 small drink.", price: 3.5, category: "Drinks" },
+    { id: "medium-drink", name: "Medium drink", description: "1 medium drink.", price: 4.5, category: "Drinks" },
+    { id: "nachos-with-cheese", name: "Nachos with cheese", description: "Nachos served with cheese.", price: 6, category: "Food" },
+    { id: "chocolate", name: "Chocolate", description: "1 chocolate bar.", price: 3, category: "Confectionery" }
 ];
 
 // Store the seats and food quantities selected by the customer.
@@ -85,6 +85,7 @@ function renderConcessions() {
             <div>
                 <p class="concession-category">${item.category}</p>
                 <h3>${item.name}</h3>
+                <p class="concession-description">${item.description}</p>
                 <strong>${currency(item.price)}</strong>
             </div>
             <div class="quantity-control" aria-label="Quantity for ${item.name}">

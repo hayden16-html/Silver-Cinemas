@@ -787,7 +787,7 @@ footer a {
     margin-bottom: 15px;
 }
 
-/* RESPONSIVE LAYOUT ADJUSTMENTS */
+/* RESPONSIVE LAYOUT */
 @media (max-width: 760px) {
     .navbar {
         height: auto;
