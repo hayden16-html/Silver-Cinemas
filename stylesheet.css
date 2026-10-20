@@ -624,11 +624,19 @@ footer a {
 
 
 /* CONTACT PAGE STYLES */
-.contact-wrapper {
-    max-width: 100%;
-    height: 100%;
-    background-image: url("./assets/2ca81d33-20f4-47fa-86e8-7faac32f08c5.jpg");
+.contact-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
+.contact-wrapper {
+    flex: 1;
+    max-width: 100%;
+    background-image: url("./assets/2ca81d33-20f4-47fa-86e8-7faac32f08c5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .contact-section {
     padding: 20px 4%;
