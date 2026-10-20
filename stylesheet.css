@@ -160,6 +160,103 @@ body {
     transform: scale(1.05);
 }
 
+.login-dialog {
+    width: min(420px, calc(100% - 32px));
+    max-width: none;
+    margin: auto;
+    padding: 26px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    color: #222;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+}
+
+.login-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.login-dialog-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.login-dialog-heading h2 {
+    color: #0757b5;
+    font-size: 26px;
+}
+
+.login-dialog-close {
+    border: 0;
+    background: transparent;
+    color: #555;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.login-dialog-intro,
+.login-dialog-note {
+    margin: 8px 0 18px;
+    color: #555;
+    font-size: 14px;
+}
+
+.login-dialog-form {
+    display: grid;
+    gap: 9px;
+}
+
+.login-dialog-form label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-dialog-form input {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 11px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.login-dialog-submit {
+    margin-top: 5px;
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 20px;
+    background: #0757b5;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-dialog-submit:hover {
+    background: #064a99;
+}
+
+.login-dialog-message {
+    min-height: 20px;
+    margin: 12px 0 4px;
+    color: #0757b5;
+    font-size: 14px;
+}
+
+.login-dialog-switch {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #0757b5;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-dialog-note {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
 
 
 /* HAMBURGER MENU */
